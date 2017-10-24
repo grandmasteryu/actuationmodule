@@ -12,4 +12,8 @@ The states of the airflow is as follows:
 |---|---|---|---|---|
 |vn.outx|0|0|1|1|
 |vn.outy|0|1|0|1|
-|states|keep|keep|exhaust|supply|
+|states|keep|keep|exhaust|supply|  
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
