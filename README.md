@@ -1,6 +1,9 @@
 # actuationmodule
 ## Instructions
-Actuation Modules(AMs) are morphology configurable "fruit sized" blocks supplied by mini pneumatic actuators. AM allows joint strucutre to configurate its stiffness comparing with traditional rigid link mechanism in field of Robotics.
+Actuation Modules(AMs) are morphology configurable "fruit sized" blocks supplied by mini pneumatic actuators. AM allows joint strucutre to configurate its stiffness comparing with traditional rigid link mechanism in field of Robotics.  
+  
+This is an Actuation Module. In the future, it will become more compact-sized.  
+<img src="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/IMG_0638.png" width="200px">
 ### Actuation Mechanism
 At present, Double Acting Cylinder is implemented on Actuation Moudle. In controlling the two chambers in an Actuation Module, we use two 3/2 valve as a set, to control the airflow of a chamber. For example, a typical allocation of valve sets
 ![](https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/valvesets.png)  
@@ -38,3 +41,15 @@ Some constraints:
 [f7]: http://chart.apis.google.com/chart?cht=tx&chl=F_G<F_i%2Bf_D%2Bf
   
 ### Step response
+In this experiment we physically connected the Actuation Modules, by using high-speed electronic-magnetic solenoid valves. For example, we connect n.in together to a public node, each .in chamber has a valve n.inx to determine state **connected** or **unconnected**.  
+![](https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/ANS.png)  
+The initialized positions of the five modules are all set to rectangles, every time the positions are set, the time(s) which the air pulses are input is(are) the same. in the experiment of **0.4MPa/0.2MPa**(based on standard atmospheric pressure), v1.out(7 times), v2.out(3 times), v3.out(5 times), v4.out(3 times), v5.out(3 times), is equally configured each time the data is recorded. For experiment procedure details, please see
+https://docs.google.com/document/d/1ly_cKkNyd3H71KAWRwUz1D6GKgH2-kLmijMkbtDZU4M/edit  
+  
+  **However, there is still some points that have to be claimed here:**  
+    
+There is a manual valve between **0.2MPa** and the public node. The public node is connected with **0.2MPa** when configuring module positions, and when conducting experiment, the valve is closed to keep the pressure in the interconnected chambers constant.  
+This experiment referenced the time scale datagraph of **0.3MPa/0.15MPa**, and some on/off combinations have been omited in the current experiment because of the results of these combinations makes no significant difference, and to shorten the experiment time.  
+The picked data is as below, named with binary 5-digit number, which means the on/off state of the n.inx.  
+e.g.: "01100" means v5.inx = 0, v4.inx = 1, v3.inx = 1, v2.inx = 0 v1.inx = 0  
+
