@@ -17,13 +17,14 @@ valvestate | keep | keep | exhaust | supply
 ### Force Receiving Analysis
 In this analysis, the damp force of the air at standard atmospheric pressure is ignored, to simplify the problem.  
 The forces received at the end of the cylinder's piston is as follows:  
+  
 ![f1]  
 ![f2]: The force of current state of vn.out. **supply->positive; keep or exhaust->zero.**  
 ![f3]: The effect of module's gravity and loads. In current experiment settings, it is always positive.
 ![f4]: The force corresponding to hte state of vn.in. **always negative.**  
 ![f5]: The damp force of damper. **when motion direction is out, negative; when direction is in, positive**  
 ![f6]: friction of the module. **when motion direction is out, negative; when direction is in, positive**   
-Some constraints: 
+Some constraints:   
 ![f7]: 
 
 [f1]: http://chart.apis.google.com/chart?cht=tx&chl=F=F_o%2BF_G-F_i-f_D-f
