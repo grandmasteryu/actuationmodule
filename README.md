@@ -4,7 +4,12 @@
   
 This is an Actuation Module. In the future, it will become more compact-sized.  
 <img src="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/IMG_0638.png" width="200px">  
-Till now, AMs have potentials of turning the conventional rigid link structure on robot into a morphable modular structure. With proper optimization, some useful robotic structures can be realized. For example, a robotic spine composed by them. [1]  
+Till now, AMs have potentials of turning the conventional rigid link structure on robot into a morphable modular structure. With proper optimization, some useful robotic structures can be realized.   
+For example, a robotic spine:
+
+>Yu, S., Nakata, Y., Nakamura, Y. et al. 
+>*A design of robotic spine composed of parallelogram actuation modules*
+>Artif Life Robotics (2017). 
 
 ### Actuation Mechanism
 At present, Double Acting Cylinder is implemented on Actuation Moudle. In controlling the two chambers in an Actuation Module, we use two 3/2 valve as a set, to control the airflow of a chamber. For example, a typical allocation of valve sets
@@ -43,9 +48,14 @@ Some constraints:
 [f7]: http://chart.apis.google.com/chart?cht=tx&chl=F_G<F_i%2Bf_D%2Bf
   
 ### Step response
-In this experiment we physically connected the Actuation Modules, by using high-speed electronic-magnetic solenoid valves. For example, we connect n.in together to a public node, each .in chamber has a valve n.inx to determine state **connected** or **unconnected**.  
+In this experiment we physically connected the Actuation Modules, by using high-speed electronic-magnetic solenoid valves. For example, we connect n.in together to a public node, each .in chamber has a valve n.inx to determine state **connected** or **unconnected** to the public node.  
 ![](https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/ANS.png)  
-The initialized positions of the five modules are all set to rectangles, every time the positions are set, the time(s) which the air pulses are input is(are) the same. in the experiment of **0.4MPa/0.2MPa**(based on standard atmospheric pressure), v1.out(7 times), v2.out(3 times), v3.out(5 times), v4.out(3 times), v5.out(3 times), is equally configured each time the data is recorded. For experiment procedure details, please see
+The initialized positions of the five modules are all set to rectangles, every time the positions are set, the time(s) which the air pulses are input is(are) the same.   
+The illustration of the experiment percedures are as follows:  
+<img src="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/IMG_0636.JPG" width="300px">
+<img src="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/IMG_0631.JPG" width="300px">  
+
+in the experiment of **0.4MPa/0.2MPa**(based on standard atmospheric pressure), v1.out(7 times), v2.out(3 times), v3.out(5 times), v4.out(3 times), v5.out(3 times), is equally configured each time the data is recorded. For experiment procedure details, please see
 https://docs.google.com/document/d/1ly_cKkNyd3H71KAWRwUz1D6GKgH2-kLmijMkbtDZU4M/edit  
   
   **However, there is still some points that have to be claimed here:**  
