@@ -49,7 +49,7 @@ Some constraints:
   
 ### Step response
 In this experiment we physically connected the Actuation Modules, by using high-speed electronic-magnetic solenoid valves. For example, we connect n.in together to a public node, each .in chamber has a valve n.inx to determine state **connected** or **unconnected** to the public node.  
-![](https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/ANS.png)  
+![](https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/ans2.png)  
 The initialized positions of the five modules are all set to rectangles, every time the positions are set, the time(s) which the air pulses are input is(are) the same.   
 The illustration of the experiment percedures are as follows:  
 <img src="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/IMG_0636.JPG" width="300px">
