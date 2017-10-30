@@ -1,18 +1,20 @@
 # actuationmodule
 ## Instructions
-Actuation Modules(AMs) are morphology configurable "fruit sized" blocks supplied by mini pneumatic actuators. AM allows joint strucutre to configurate its stiffness comparing with traditional rigid link mechanism in field of Robotics.  
+**Actuation Modules(AMs)** are morphology configurable "fruit sized" blocks supplied by mini pneumatic actuators. AM allows joint strucutre to configurate its stiffness comparing with traditional rigid link mechanism in field of Robotics.  
   
 This is an Actuation Module. In the future, it will become more compact-sized.  
-<img src="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/IMG_0638.png" width="200px">
+<img src="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/IMG_0638.png" width="200px">  
+Till now, AMs have potentials of turning the conventional rigid link structure on robot into a morphable modular structure. With proper optimization, some useful robotic structures can be realized. For example, a robotic spine composed by them. [1]  
+
 ### Actuation Mechanism
 At present, Double Acting Cylinder is implemented on Actuation Moudle. In controlling the two chambers in an Actuation Module, we use two 3/2 valve as a set, to control the airflow of a chamber. For example, a typical allocation of valve sets
 ![](https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/valvesets.png)  
 
-we use `vn.outx` to describe the valve named "x" in the side of chamber named "out", of the actuator with the serial number n.  
+we use `vn.outx` to describe the valve named **"x"** in the side of chamber named **"out"**, of the actuator with the serial number **n**.  
   
-The states of the airflow is as follows:  
+The states of the chamber airflow is as follows:  
 
-valvestate | keep | keep | exhaust | supply  
+chamberstate | keep | keep | exhaust | supply  
 --- | --- | --- | --- | ---
 `vn.outx` | 0 | 0 | 1 | 1
 `vn.outy` | 0 | 1 | 0 | 1
