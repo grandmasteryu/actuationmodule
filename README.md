@@ -52,10 +52,13 @@ In this experiment we physically connected the Actuation Modules, by using high-
 ![](https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/ans2.png)  
 The initialized positions of the five modules are all set to rectangles, every time the positions are set, the time(s) which the air pulses are input is(are) the same.   
 The illustration of the experiment percedures are as follows:  
-<img src="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/IMG_0636.JPG" width="300px">
-<img src="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/IMG_0631.JPG" width="300px">  
+<img src="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/IMG_0636efg.png" width="300px">
+<img src="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/IMG_0631efg.png" width="300px">  
+In the experiment, a weight(500g) is hanged by a string. To carry out step response, we use a pair of pincers to grab another string to hold the weight in the position that make the tension of the hanging string **just zero**. The step response starts when the pinceers are opened, so that the string which holds the weight is released. The purpose is to control the condition each time the experements are conducted.  
 
-in the experiment of **0.4MPa/0.2MPa**(based on standard atmospheric pressure), v1.out(7 times), v2.out(3 times), v3.out(5 times), v4.out(3 times), v5.out(3 times), is equally configured each time the data is recorded. For experiment procedure details, please see
+By changing the on/off status of the solenoid valves, we suppose to get **variations of these step responses towards time**.  
+
+In the experiment of **0.4MPa/0.2MPa**(based on standard atmospheric pressure), v1.out(7 times), v2.out(3 times), v3.out(5 times), v4.out(3 times), v5.out(3 times), is equally configured each time the data is recorded. For experiment procedure details, please see
 https://docs.google.com/document/d/1ly_cKkNyd3H71KAWRwUz1D6GKgH2-kLmijMkbtDZU4M/edit  
   
   **However, there is still some points that have to be claimed here:**  
