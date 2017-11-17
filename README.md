@@ -23,9 +23,9 @@ This is an Actuation Module. In the future, it will become more compact-sized.
 <img src="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/IMG_0638.png" width="200px">  
 
 ### (3)Actuation Mechanism
-The actuator which changes the morphology of the ActM is a Double Acting Cylinder.
+The actuator which changes the morphology of the ActM is a [Double Acting Cylinder](http://ca01.smcworld.com/catalog/BEST-5-2-jp/pdf/2-p0627-0652-cuj.pdf). `CUJB10-30` is currently used.  
 There are 2 chambers and 1 piston in a Double Acting Cylinder.
-To control the position of piston, we use a pair of 3/2 solenoid valves as a set to control the airflow of a chamber. For example, a typical allocation of valve sets  
+To control the position of piston, we use a pair of 3/2 [FESTO solenoid valves](https://www.festo.com/cat/en-gb_gb/data/doc_ENGB/PDF/EN/MH2TO4_EN.PDF) as a set to control the airflow of a chamber. `MHE2-MS1H-3/2O-QS-4` is currently used. For example, a typical allocation of valve sets  
 <img src ="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/valvesets.png" width="150px">  
 
 we use `vn.outx` to describe the valve named **"x"** in the side of chamber named **"out"**, of the actuator with the serial number **n**.  
