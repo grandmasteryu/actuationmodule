@@ -1,7 +1,25 @@
 # actuationmodule
 ## Instructions
-**Actuation Modules(AMs)** are morphology configurable "fruit sized" blocks supplied by mini pneumatic actuators. AM allows joint strucutre to configurate its stiffness comparing with traditional rigid link mechanism in field of Robotics.  
+<What is actuation module>  
   
+**Actuation Modules(ActMs)** are morphology configurable "fruit sized" blocks supplied by mini pneumatic actuators. ActM provides a novel joint strucutre to configurate its morphology and stiffness comparing with traditional rigid link mechanism in the field of Robotics.  
+
+ActMs was designed and developed by [Ishiguro Laboratory](http://eng.irl.sys.es.osaka-u.ac.jp/), Osaka University. The ActM was developed by using wide-used mechanical parts, and parts manufactured by CNC which was provided by [OriginalMind](http://www.originalmind.co.jp/). The design and simulation were made in [Autodesk Inventor 2017](https://www.autodesk.com/products/inventor/overview).  
+
+### (1)Citing
+If using this structure for academic purposes please consider citing the following papers.  
+
+>Yu, S., Nakata, Y., Nakamura, Y. et al.(2017). 
+>*A design of robotic spine composed of parallelogram actuation modules.*
+>Artif Life Robotics. 22(4), 477-482.
+
+### (2)Concept
+<The concept of ActM and what it can achieve>  
+When we design humanoid robots, for the sake of functionality, the mechanism of the robots are always "carefully designed".  
+  
+Robot behaviors are always changed by software synergies.  
+
+
 This is an Actuation Module. In the future, it will become more compact-sized.  
 <img src="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/IMG_0638.png" width="200px">  
 Till now, AMs have potentials of turning the conventional rigid link structure on robot into a morphable modular structure. With proper optimization, some useful robotic structures can be realized.   
