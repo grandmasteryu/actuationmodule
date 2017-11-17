@@ -1,8 +1,8 @@
-# actuationmodule
+# Actuation Modules
 ## Instructions
 <What is actuation module>  
   
-**Actuation Modules(ActMs)** are morphology configurable "fruit sized" blocks supplied by mini pneumatic actuators. ActM provides a novel joint strucutre to configurate its morphology and stiffness comparing with traditional rigid link mechanism in the field of Robotics.  
+**Actuation Modules(ActMs)** are morphology configurable "fruit sized" blocks supplied by mini pneumatic actuators. ActM provides a novel joint strucutre to configurate and dynamically change its morphology and stiffness comparing with traditional rigid link mechanism in the field of Robotics.  
 
 ActMs was designed and developed by [Ishiguro Laboratory](http://eng.irl.sys.es.osaka-u.ac.jp/), Osaka University. The ActM was developed by using wide-used mechanical parts, and parts manufactured by CNC which was provided by [OriginalMind](http://www.originalmind.co.jp/). The design and simulation were made in [Autodesk Inventor 2017](https://www.autodesk.com/products/inventor/overview).  
 
@@ -30,12 +30,19 @@ To control the position of piston, we use a pair of 3/2 solenoid valves as a set
 
 we use `vn.outx` to describe the valve named **"x"** in the side of chamber named **"out"**, of the actuator with the serial number **n**.  
   
-The states of the chamber airflow is as follows:  
+When the input signal of solenoid valve changes(0 or 1), there are 3 states of the chamber airflow, as follows:
 
 chamberstate | keep | keep | exhaust | supply  
 --- | --- | --- | --- | ---
 `vn.outx` | 0 | 0 | 1 | 1
-`vn.outy` | 0 | 1 | 0 | 1
+`vn.outy` | 0 | 1 | 0 | 1  
+  
+The position of the ActM is controlled by switching these 3 states. The default state of the chamber are **keep** so that piston can keep its position. When we want to change the position of the piston, we switch the state of the chamber to **exhaust** or **supply**, which depends on retraction or extraction, and after **5~10 ms**, we switch the state back to **keep**. During this process, the position of the piston is changed, which means the morphology of the ActM is configured.  
+  
+We use the follwing function to change the states of the ActMs online.
+    
+    void setState(int state, int set_num, int set_time)
+
 
 ### Force Receiving Analysis
 In this analysis, the damp force of the air at standard atmospheric pressure is ignored, to simplify the problem.  
