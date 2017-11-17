@@ -41,12 +41,13 @@ The position of the ActM is controlled by switching these 3 states. The default 
   
 We use the follwing function to change the states of the ActMs online.
     
-    void setState(int state, int set_num, int set_time) // set_num: the serial number of valve
+    void setState(int state, int set_num, int set_time){ // set_num: the serial number of valve
       valve[set_num].write(0);
       valve[set_num + 1].write(1);
       wait_ms(settimems);
       valve[set_num].write(0);
       valve[set_num + 1].write(0);      
+      }
 
 ### Force Receiving Analysis
 In this analysis, the damp force of the air at standard atmospheric pressure is ignored, to simplify the problem.  
@@ -55,13 +56,14 @@ The forces received at the end of the cylinder's piston is as follows:
 ![f1]  
 
 ![f2]: The force of current state of vn.out. **supply->positive; keep or exhaust->zero.**  
-![f3]: The effect of module's gravity and loads. In current experiment settings, it is always positive.
+![f3]: The effect of module's gravity and loads. In current experiment settings, it is always positive.  
 ![f4]: The force corresponding to hte state of vn.in. **always negative.**  
 ![f5]: The damp force of damper. **when motion direction is out, negative; when direction is in, positive**  
 ![f6]: friction of the module. **when motion direction is out, negative; when direction is in, positive**   
   
 Some constraints:   
-![f7]: 
+![f7]:   
+![f5] is always with the same direction with ![f6].  
 
 [f1]: http://chart.apis.google.com/chart?cht=tx&chl=F=F_o%2BF_G-F_i-f_D-f
 [f2]: http://chart.apis.google.com/chart?cht=tx&chl=F_o
