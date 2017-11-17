@@ -37,12 +37,16 @@ chamberstate | keep | keep | exhaust | supply
 `vn.outx` | 0 | 0 | 1 | 1
 `vn.outy` | 0 | 1 | 0 | 1  
   
-The position of the ActM is controlled by switching these 3 states. The default state of the chamber are **keep** so that piston can keep its position. When we want to change the position of the piston, we switch the state of the chamber to **exhaust** or **supply**, which depends on retraction or extraction, and after **5~10 ms**, we switch the state back to **keep**. During this process, the position of the piston is changed, which means the morphology of the ActM is configured.  
+The position of the ActM is controlled by switching these 3 states. The default state of the chamber are **keep** so that piston can keep its position. When we want to change the position of the piston, we switch the state of the chamber to **exhaust** or **supply**, which depends on **retraction** or **extraction**, and after **5~10 ms**, we switch the state back to **keep**. During this process, the position of the piston is changed, which means the morphology of the ActM is configured.  
   
 We use the follwing function to change the states of the ActMs online.
     
-    void setState(int state, int set_num, int set_time)
-
+    void setState(int state, int set_num, int set_time) // set_num: the serial number of valve
+      valve[set_num].write(0);
+      valve[set_num + 1].write(1);
+      wait_ms(settimems);
+      valve[set_num].write(0);
+      valve[set_num + 1].write(0);      
 
 ### Force Receiving Analysis
 In this analysis, the damp force of the air at standard atmospheric pressure is ignored, to simplify the problem.  
