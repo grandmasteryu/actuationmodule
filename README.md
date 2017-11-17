@@ -19,19 +19,14 @@ When we design humanoid robots, for the sake of functionality, the mechanism of 
   
 Robot behaviors are always changed by software synergies.  
 
-
 This is an Actuation Module. In the future, it will become more compact-sized.  
 <img src="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/IMG_0638.png" width="200px">  
-Till now, AMs have potentials of turning the conventional rigid link structure on robot into a morphable modular structure. With proper optimization, some useful robotic structures can be realized.   
-For example, a robotic spine:
 
->Yu, S., Nakata, Y., Nakamura, Y. et al. 
->*A design of robotic spine composed of parallelogram actuation modules*
->Artif Life Robotics (2017). 
-
-### Actuation Mechanism
-At present, Double Acting Cylinder is implemented on Actuation Moudle. In controlling the two chambers in an Actuation Module, we use two 3/2 valve as a set, to control the airflow of a chamber. For example, a typical allocation of valve sets
-![](https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/valvesets.png)  
+### (3)Actuation Mechanism
+The actuator which changes the morphology of the ActM is a Double Acting Cylinder.
+There are 2 chambers and 1 piston in a Double Acting Cylinder.
+To control the position of piston, we use a pair of 3/2 solenoid valves as a set to control the airflow of a chamber. For example, a typical allocation of valve sets  
+<img src ="https://github.com/grandmasteryu/actuationmodule/blob/master/screenshot/valvesets.png" width="150px">  
 
 we use `vn.outx` to describe the valve named **"x"** in the side of chamber named **"out"**, of the actuator with the serial number **n**.  
   
